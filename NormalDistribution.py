@@ -20,7 +20,6 @@ import matplotlib.pyplot as plt
 """
 mean : 100, sd : 15
 """
-
 resultCDF = norm.cdf([100, 130, 140], 100, 15)
 print("mean : 100, sd : 15")
 print("cdf for 100 : ", resultCDF[0])
@@ -53,7 +52,6 @@ plt.show()
 """
 P{mu - sigma < x < mu + sigma} -> 0.68 in normal distribution
 """
-
 result = norm.cdf(1) - norm.cdf(-1)
 print("P{mu - sigma < x < mu + sigma} ->", result)
 
@@ -82,7 +80,6 @@ plt.show()
 """
 P{mu - 2 * sigma < x < mu + 2 * sigma} -> 0.95 in normal distribution
 """
-
 result = norm.cdf(2) - norm.cdf(-2)
 print("P{mu - 2 * sigma < x < mu + 2 * sigma} ->", result)
 
