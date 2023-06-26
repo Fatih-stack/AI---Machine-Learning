@@ -20,30 +20,24 @@ samples_std = sigma / np.sqrt(n)
 
 lower_bound = norm.ppf(0.025, sample_mean, samples_std)
 upper_bound = norm.ppf(0.975, sample_mean, samples_std)
-
 print(lower_bound, upper_bound)     # 63.04003601545995 66.95996398454005
 
 CF = 0.99 # confidence leve increased to %99
 
 lower_bound = norm.ppf((1 - CF) / 2, sample_mean, samples_std)
 upper_bound = norm.ppf(1 - (1 - CF) / 2, sample_mean, samples_std)
-
 print(lower_bound, upper_bound) 
 
 for n in range(30, 105, 5):
-
-    samples_std = sigma / np.sqrt(n)
-    
+    samples_std = sigma / np.sqrt(n)  
     lower_bound = norm.ppf((1 - CF) / 2, sample_mean, samples_std)
-    upper_bound = norm.ppf(1 - (1 - CF) / 2, sample_mean, samples_std)
-    
+    upper_bound = norm.ppf(1 - (1 - CF) / 2, sample_mean, samples_std)    
     print(f'{n}: [{lower_bound}, {upper_bound}]') 
 
 n = 100
 samples_std = sigma / np.sqrt(n)
 CF = 0.95
 lower_bound, upper_bound = norm.interval(CF, sample_mean, samples_std)
-
 print(lower_bound, upper_bound)
 
 population = np.random.randint(0, 1_000_000_000, 1_000_000)
@@ -56,7 +50,6 @@ sample = np.random.choice(population, SAMPLE_SIZE)
 print(f'Population Mean: {np.mean(population)}')
 
 lower_bound, upper_bound = norm.interval(CL, np.mean(sample), sigma / np.sqrt(SAMPLE_SIZE))
-
 print(lower_bound, upper_bound)
 
 sample = np.array([101.93386212, 106.66664836, 127.72179427,  67.18904948,

@@ -9,15 +9,11 @@ if p value is bigger than 0.05 -> normal  dist
 """
 
 from scipy.stats import uniform, shapiro, kstest, norm
+import matplotlib.pyplot as plt
 
 x = uniform.rvs(size=1000)
-
 stat, pval = kstest(x, 'norm')
-
-print(stat, pval)  # 0.5003124945817926 5.217793307475998e-232
-
-import matplotlib.pyplot as plt 
-
+print(stat, pval)  
 plt.hist(x)
 plt.show()
 
