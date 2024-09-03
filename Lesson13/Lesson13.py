@@ -8,27 +8,27 @@ Created on Mon Jun 26 16:19:28 2023
 
 import pandas as pd
 
-df = pd.read_csv('melb_data.csv')
+df = pd.read_csv('Lesson13\melb_data.csv')
 
-print(f'Toplam satır sayısı: {df.shape[0]}, Toplam sütun sayısı: {df.shape[1]}', end='\n\n')
+print(f'Toplam satir sayisi: {df.shape[0]}, Toplam sütun sayisi: {df.shape[1]}', end='\n\n')
 missing_info = df.isna().sum()
-print('Eksik verilerin sütunlara göre dağılımı', end='\n\n')
+print('Eksik verilerin sütunlara göre dagilimi', end='\n\n')
 print(missing_info, end='\n\n')
 
 missing_columns = [name for name in df.columns if df[name].isna().any()]
-print('Eksik verilerin ilişkin olduğu sütunlar', end='\n\n')
+print('Eksik verilerin ilişkin oldugu sütunlar', end='\n\n')
 print(missing_columns, end='\n\n')
 
 missing_ratio = df.isna().sum().sum() / df.size
-print('Eksik verilerin oranları', end='\n\n')
+print('Eksik verilerin oranlari', end='\n\n')
 print(missing_ratio, end='\n\n')
 
 total_missing_rows = df.isna().any(axis=1).sum()
-print('Eksik veri içeren satırların sayısı', end='\n\n')
+print('Eksik veri içeren satirlarin sayisi', end='\n\n')
 print(total_missing_rows, end='\n\n')
 
 total_missing_rows_ratio = df.isna().any(axis=1).sum() / len(df)
-print('Eksik veri içeren satırların oranı', end='\n\n')
+print('Eksik veri içeren satirlarin orani', end='\n\n')
 print(total_missing_rows_ratio, end='\n\n')
 
 import numpy as np
