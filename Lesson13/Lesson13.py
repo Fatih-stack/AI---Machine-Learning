@@ -80,6 +80,7 @@ print(df, end='\n\n')
 
 from sklearn.preprocessing import LabelEncoder
 
+df = pd.read_csv('test.csv')
 print(df, end='\n\n')
 
 le = LabelEncoder()

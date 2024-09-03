@@ -17,6 +17,8 @@ draw_gauss(0, 1)
 # mu : mean - sigma : stddev
 def draw_gauss_cartesian(mu, sigma):
     x = np.linspace(-10, 10, 10000)
+
+    # probability density function related to normal distribution
     y = (1 / (np.sqrt((2 * np.pi)) * sigma)) * np.e ** (-0.5 * ((x - mu) / sigma) ** 2)
     
     plt.figure(figsize=(8, 8))

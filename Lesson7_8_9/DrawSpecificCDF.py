@@ -8,7 +8,7 @@ print(result)
 
 import matplotlib.pyplot as plt
 
-plt.title('P{120 < x <= 130} Olasılığı ', pad=20, fontsize=14, fontweight='bold')
+plt.title('P{120 < x <= 130} Olasiligi ', pad=20, fontsize=14, fontweight='bold')
 x = np.linspace(40, 160, 1000)
 y = [nd.pdf(val) for val in x]
 
