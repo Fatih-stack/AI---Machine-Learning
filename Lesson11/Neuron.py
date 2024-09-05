@@ -10,7 +10,7 @@ import numpy as np
 
 class Neuron:
     def __init__(self, w, b):
-        self.w= w
+        self.w = w
         self.b = b
         
     def output(self, x, activation):
